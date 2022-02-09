@@ -1,5 +1,17 @@
+html,
 body {
+  height: 100%;
+}
 
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: $jost;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.2;
+  color: $default;
+  background-color: #000;
 }
 
 .main {
@@ -10,4 +22,31 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.wrapper {
+  display: flex;
+
+  &__link+.wrapper__link {
+    margin-left: 45px;
+  }
+}
+
+.link {
+  display: block;
+  font-weight: 700;
+  border: 2px solid $link;
+  border-radius: 7px;
+  min-width: 265px;
+  padding: 16px 0;
+  text-align: center;
+  color: $link;
+  transition: ease .3s;
+
+  &:hover {
+    color: $link-hover;
+    transition: ease .3s;
+    border-color: #FFF61B;
+    background: linear-gradient(180deg, #FFA12A 0%, #FEEF6D 100%);      
+  }
 }
