@@ -3,226 +3,194 @@
 @import 'reset';
 @import 'libs';
 @import 'global';
-
 .header {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.47) 25.63%, rgba(0, 0, 0, 0) 117.23%);
-  backdrop-filter: blur(12px);
-
-  &__inner {
-    display: flex;
-    justify-content: center;
-    padding: 21px 0;
-  }
-
-  .logo {
-    margin-right: 72px;
-  }
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.47) 25.63%, rgba(0, 0, 0, 0) 117.23%);
+    backdrop-filter: blur(12px);
+    &__inner {
+        display: flex;
+        justify-content: center;
+        padding: 21px 0;
+    }
+    .logo {
+        margin-right: 72px;
+    }
 }
 
 .menu {
-  display: flex;
-  align-items: center;
-
-  &__list {
     display: flex;
-  }
-
-  &__list {
-    margin-right: 100px;
-  }
-
-  &__item {
-    &:last-child {
-      margin-right: 90px;
+    align-items: center;
+    &__list {
+        display: flex;
     }
-  }
-
-  &__item+.menu__item {
-    margin-left: 65px;
-  }
-
-  &__link {
-    position: relative;
-    padding: 5px;
-    color: $default;
-
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      height: 3px;
-      width: 100%;
-      background: rgba(255, 255, 255, 0.61);
-      border-radius: 16px;
-      opacity: 0;
-      transition: ease .3s;
+    &__list {
+        margin-right: 100px;
     }
-
-    &:hover {
-      &::after {
-        opacity: 1;
-      }
+    &__item {
+        &:last-child {
+            margin-right: 90px;
+        }
     }
-  }
-
-  &__item-link {
-    padding: 9px 21px;
-    color: $default;
-    border: 1px solid $default;
-    border-radius: 5px;
-    transition: ease .5s;
-
-    &:hover {
-      background: #935243;
+    &__item+.menu__item {
+        margin-left: 65px;
     }
-  }
-
-  &__item-link+.menu__item-link {
-    margin-left: 23px;
-  }
+    &__link {
+        position: relative;
+        padding: 5px;
+        color: $default;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 3px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.61);
+            border-radius: 16px;
+            opacity: 0;
+            transition: ease .3s;
+        }
+        &:hover {
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+    &__item-link {
+        padding: 9px 21px;
+        color: $default;
+        border: 1px solid $default;
+        border-radius: 5px;
+        transition: ease .5s;
+        &:hover {
+            background: #935243;
+        }
+    }
+    &__item-link+.menu__item-link {
+        margin-left: 23px;
+    }
 }
 
 .socials {
-  display: flex;
-  align-items: center;
-  max-height: 45px;
-
-  &__text {
-    margin-right: 31px;
-  }
-
-  &__item {
-    transition: ease .3s;
-    &:last-child {
-      margin-right: 66px;
+    display: flex;
+    align-items: center;
+    max-height: 45px;
+    &__text {
+        margin-right: 31px;
     }
-
-    &:hover {
-      transform: scale(1.2, 1.2);
+    &__item {
+        transition: ease .3s;
+        &:last-child {
+            margin-right: 66px;
+        }
+        &:hover {
+            transform: scale(1.2, 1.2);
+        }
     }
-  }
-
-  &__item--footer {
-    &:last-child {
-      margin-right: 0;
+    &__item--footer {
+        &:last-child {
+            margin-right: 0;
+        }
     }
-  }
-
-  &__item+.socials__item {
-    margin-left: 25px;
-  }
-
-  &__link {
-    font-size: 0;
-    line-height: 0;
-  }
+    &__item+.socials__item {
+        margin-left: 25px;
+    }
+    &__link {
+        font-size: 0;
+        line-height: 0;
+    }
 }
 
 .footer {
-  padding-bottom: 90px;
-
-  &__inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+    padding-bottom: 90px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 .top {
-  background-image: url('../images/top/top-bg.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-
-  &__inner {
-    padding-top: 350px;
-    padding-bottom: 285px;
-  }
-
-  &__image {
-    margin-bottom: 48px;
-  }
-
-  &__text {
-    position: relative;
-    text-transform: uppercase;
-    padding-left: 50px;
-    margin-bottom: 20px;
-    color: rgba(255, 255, 255, 0.68);
-    font-weight: 600;
-
-    &:last-of-type {
-      margin-bottom: 64px;
+    background-image: url('../images/top/top-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    &__inner {
+        padding-top: 350px;
+        padding-bottom: 285px;
     }
-  }
-
-  &__aim {
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-  }
+    &__image {
+        margin-bottom: 48px;
+    }
+    &__text {
+        position: relative;
+        text-transform: uppercase;
+        padding-left: 50px;
+        margin-bottom: 20px;
+        color: rgba(255, 255, 255, 0.68);
+        font-weight: 600;
+        &:last-of-type {
+            margin-bottom: 64px;
+        }
+    }
+    &__aim {
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+    }
 }
 
 .benefits {
-  position: relative;
-  background-image: url('../images/benefits/benefits-bg.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  box-shadow: 0px -15px 100px 0px rgba(0, 0, 0, 0.75);
-  padding-top: 40px;
-  padding-bottom: 240px;
-
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, .9);
-    z-index: 2;
-    box-shadow: inset 50px 100px 100px 75px rgb(0, 0, 0, 0.75);
-  }
-
-  &__inner {
     position: relative;
-    z-index: 3;
-  }
-
-  &__items {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 40px;
-  }
-
-  &__image {
-    &:first-child {
-      margin-bottom: 9px;
+    background-image: url('../images/benefits/benefits-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px -15px 100px 0px rgba(0, 0, 0, 0.75);
+    padding-top: 40px;
+    padding-bottom: 240px;
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, .9);
+        z-index: 2;
+        box-shadow: inset 50px 100px 100px 75px rgb(0, 0, 0, 0.75);
     }
-
-    margin-bottom: 13px;
-  }
-
-  &__text {
-    text-align: center;
-    text-transform: uppercase;
-    color: #FFA12A;
-  }
+    &__inner {
+        position: relative;
+        z-index: 3;
+    }
+    &__items {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    &__image {
+        &:first-child {
+            margin-bottom: 9px;
+        }
+        margin-bottom: 13px;
+    }
+    &__text {
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFA12A;
+    }
 }
 
 // .video-popup {
 //   display: flex;
 //   justify-content: center;
 //   align-items: center;
-
 //   &::after {
 //     content: "";
 //     position: absolute;
@@ -234,30 +202,31 @@
 //     height: 88px;
 //   }
 // }
-
 // &__video {
 //   position: relative;
 //   max-width: 1030px;
 //   height: 580px;
 //   border-radius: 21px;
 // }
-
 .video-popup {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &__play {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 1030px;
-    width: 100%;
-    height: 580px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
+    &__play {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1030px;
+        width: 100%;
+        height: 580px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transition: ease 0.5s;
+        &:hover {
+            transform: scale(0.99, 0.99)
+        }
+    }
 }
 
 @import 'media';
