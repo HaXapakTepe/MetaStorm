@@ -4,6 +4,8 @@ body {
 }
 
 body {
+  max-width: 1920px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   font-family: $jost;
@@ -11,7 +13,7 @@ body {
   font-size: 18px;
   line-height: 1.2;
   color: $default;
-  background-color: #000;
+  background-color: #010101;
 }
 
 .main {
@@ -44,10 +46,18 @@ body {
   transition: ease .3s;
 
   &:hover {
-    transform: scale(1.1, 1.1);
     color: $link-hover;
     transition: ease .3s;
     border-color: #FFF61B;
     background: linear-gradient(180deg, #FFA12A 0%, #FEEF6D 100%);
   }
+}
+
+.title {
+  font-size: 43px;
+  line-height: 62px;
+  background: linear-gradient(180deg, #D2D8DE 10%, #FEFFFF 30%, #C0C3C6 50%, #B6BBBF 70%, #ACB2B7 90%);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
