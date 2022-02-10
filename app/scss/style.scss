@@ -60,7 +60,7 @@
       background: rgba(255, 255, 255, 0.61);
       border-radius: 16px;
       opacity: 0;
-      transition: all .3s;
+      transition: ease .3s;
     }
 
     &:hover {
@@ -75,7 +75,7 @@
     color: $default;
     border: 1px solid $default;
     border-radius: 5px;
-    transition: all .3s;
+    transition: ease .5s;
 
     &:hover {
       background: #935243;
@@ -97,8 +97,13 @@
   }
 
   &__item {
+    transition: ease .3s;
     &:last-child {
       margin-right: 66px;
+    }
+
+    &:hover {
+      transform: scale(1.2, 1.2);
     }
   }
 
@@ -133,6 +138,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
 
   &__inner {
     padding-top: 350px;
@@ -169,6 +175,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  box-shadow: 0px -15px 100px 0px rgba(0, 0, 0, 0.75);
   padding-top: 40px;
   padding-bottom: 240px;
 
@@ -181,6 +188,7 @@
     bottom: 0;
     background: rgba(0, 0, 0, .9);
     z-index: 2;
+    box-shadow: inset 50px 100px 100px 75px rgb(0, 0, 0, 0.75);
   }
 
   &__inner {
@@ -204,21 +212,51 @@
   }
 
   &__text {
+    text-align: center;
     text-transform: uppercase;
     color: #FFA12A;
   }
+}
 
-  &__wrapper {
+// .video-popup {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     left: 50%;
+//     top: 50%;
+//     transform: translate(-50%, 65%);
+//     background-image: url("../images/benefits/play.svg");
+//     width: 123px;
+//     height: 88px;
+//   }
+// }
+
+// &__video {
+//   position: relative;
+//   max-width: 1030px;
+//   height: 580px;
+//   border-radius: 21px;
+// }
+
+.video-popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__play {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  &__video {
-    position: relative;
     max-width: 1030px;
+    width: 100%;
     height: 580px;
-    border-radius: 21px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }
 

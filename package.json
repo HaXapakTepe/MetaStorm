@@ -19,6 +19,8 @@
     "jquery": "^3.6.0",
     "sass": "^1.35.2"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7"
+  },
   "description": ""
 }

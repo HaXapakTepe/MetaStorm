@@ -44,9 +44,10 @@ body {
   transition: ease .3s;
 
   &:hover {
+    transform: scale(1.1, 1.1);
     color: $link-hover;
     transition: ease .3s;
     border-color: #FFF61B;
-    background: linear-gradient(180deg, #FFA12A 0%, #FEEF6D 100%);      
+    background: linear-gradient(180deg, #FFA12A 0%, #FEEF6D 100%);
   }
 }
