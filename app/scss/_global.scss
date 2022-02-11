@@ -11,7 +11,7 @@ body {
   font-family: $jost;
   font-weight: 400;
   font-size: 18px;
-  line-height: 1.2;
+  line-height: 1.4;
   color: $default;
   background-color: #010101;
 }
@@ -28,15 +28,18 @@ body {
 
 .wrapper {
   display: flex;
+  margin-left: 3px;
 
   &__link+.wrapper__link {
-    margin-left: 45px;
+    margin-left: 41px;
   }
 }
 
 .link {
   display: block;
+  text-transform: uppercase;
   font-weight: 700;
+  font-size: 22px;
   border: 2px solid $link;
   border-radius: 7px;
   min-width: 265px;
@@ -55,7 +58,6 @@ body {
 
 .title {
   font-size: 43px;
-  line-height: 62px;
   background: linear-gradient(180deg, #D2D8DE 10%, #FEFFFF 30%, #C0C3C6 50%, #B6BBBF 70%, #ACB2B7 90%);
 
   -webkit-background-clip: text;
