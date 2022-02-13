@@ -797,7 +797,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  top: -440px;
+  top: -480px;
   z-index: 1;
 
   &:after {
@@ -807,7 +807,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, .7);
+    background: rgba(0, 0, 0, .9);
     z-index: 2;
     box-shadow: inset 200px 50px 200px 0px rgb(0 0 0 / 99%);
   }
@@ -817,7 +817,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -35%);
+    transform: translate(-50%, -17%);
     width: 100%;
     height: 219px;
     background-image: url('../images/development/development.png');
@@ -829,6 +829,7 @@
 
   &__title {
     position: relative;
+    top: 40px;
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 56px;
@@ -837,6 +838,7 @@
 
   &__inner {
     position: relative;
+    top: 40px;
     display: flex;
     flex-direction: column;
     z-index: 3;
