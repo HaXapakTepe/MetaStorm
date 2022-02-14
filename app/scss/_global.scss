@@ -1,11 +1,12 @@
 html,
 body {
-  height: 100%;
+  // height: 100%;
 }
 
 body {
   max-width: 1920px;
   margin: 0 auto;
+  padding: 0;
   display: flex;
   flex-direction: column;
   font-family: $jost;
@@ -30,7 +31,7 @@ body {
   display: flex;
   margin-left: 3px;
 
-  &__link+.wrapper__link {
+  .link+.link {
     margin-left: 41px;
   }
 }
@@ -59,7 +60,6 @@ body {
 .title {
   font-size: 43px;
   background: linear-gradient(180deg, #D2D8DE 10%, #FEFFFF 30%, #C0C3C6 50%, #B6BBBF 70%, #ACB2B7 90%);
-  
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

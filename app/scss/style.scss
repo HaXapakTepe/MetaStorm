@@ -15,7 +15,7 @@
   &__inner {
     display: flex;
     justify-content: space-between;
-    padding: 22px 0 0;
+    padding: 23px 0 21px;
   }
 }
 
@@ -52,7 +52,7 @@
       background: rgba(255, 255, 255, 0.61);
       border-radius: 16px;
       opacity: 0;
-      transition: ease .3s;
+      transition: ease 0.3s;
     }
 
     &:hover {
@@ -117,13 +117,15 @@
 }
 
 .footer {
-  padding-top: 200px;
-  padding-bottom: 90px;
+  position: relative;
+  z-index: 1;
+  bottom: 80px;
 
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 7px 0 5px;
   }
 }
 
@@ -132,7 +134,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  // height: 100vh;
 
   &__inner {
     padding-top: 350px;
@@ -181,9 +182,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, .9);
+    background: rgba(0, 0, 0, 0.9);
     z-index: 2;
-    box-shadow: inset 200px 50px 200px 0px rgb(0 0 0 / 99%);
+    box-shadow: inset 200px 50px 200px 0px rgb(0, 0, 0, 0.99);
   }
 
   &__inner {
@@ -245,7 +246,6 @@
 .info {
   position: relative;
   top: -120px;
-  padding-top: 137px;
 
   &::before {
     content: "";
@@ -281,7 +281,8 @@
   }
 
   &__content {
-    padding-left: 5px
+    padding-left: 5px;
+    padding-top: 137px;
   }
 
   &__title {
@@ -295,6 +296,12 @@
   &__text {
     max-width: 600px;
     margin-bottom: 27px;
+  }
+
+  &__image {
+    position: relative;
+    right: -175px;
+    bottom: -105px;
   }
 }
 
@@ -314,9 +321,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, .9);
+    background: rgba(0, 0, 0, 0.9);
     z-index: 2;
-    box-shadow: inset 200px 50px 200px rgb(0 0 0 / 99%), inset 0 70px 100px 0 rgb(0 0 0 / 99%);
+    box-shadow: inset 200px 50px 200px rgb(0 0 0 / 99%), inset 0 70px 100px 0 rgb(0, 0, 0, 0.99);
   }
 
 
@@ -523,7 +530,13 @@
     box-shadow: 0px 4px 40px rgba(80, 31, 164, 0.13),
       0px 4px 4px rgba(0, 0, 0, 0.59);
     border-radius: 10px;
+    transition: ease 0.3s;
     cursor: pointer;
+
+    &:hover {
+      transition: ease 0.3s;
+      border-color: #6625D6;
+    }
   }
 
   &__box-item {
@@ -620,9 +633,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, .7);
+    background: rgba(0, 0, 0, 0.7);
     z-index: 2;
-    box-shadow: inset 200px 50px 200px 0px rgb(0 0 0 / 99%);
+    box-shadow: inset 200px 50px 200px 0 rgb(0, 0, 0, 0.99);
   }
 
   &__title {
@@ -672,19 +685,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 8px 173px 12px;
+    padding: 8px 172px 12px 173px;
     margin: 0 -3px 27px;
     font-weight: 700;
     font-size: 22px;
     line-height: 32px;
-    border-radius: 5.5px 5.5px 0px 0px;
+    border-radius: 5.5px 5.5px 0 0;
     background: linear-gradient(180deg, #5B2B30 -90.77%, #6B3935 12.11%, #A25B48 97.02%);
   }
 
   &__meta {
     position: relative;
-    top: 8px;
-    right: 8px;
+    top: 6px;
+    right: 9px;
   }
 
   &__text-aim {
@@ -713,17 +726,41 @@
 
 .token {
   position: relative;
-  background-image: url('../images/token/bg.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 232px 0;
-  top: -370px;
-  z-index: 2;
+  top: -120px;
+
+  &::before {
+    content: "";
+    width: 1367px;
+    height: 1080px;
+    position: absolute;
+    background-image: url('../images/token/left.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    left: -137px;
+    top: -207px;
+    z-index: 3;
+  }
+
+  &::after {
+    content: "";
+    width: 1246px;
+    height: 1150px;
+    position: absolute;
+    background-image: url('../images/token/right.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    top: -260px;
+    right: 0;
+  }
 
   &__inner {
+    position: relative;
     display: flex;
     justify-content: space-between;
+    z-index: 4;
   }
 
   &__title {
@@ -735,7 +772,7 @@
 
   &__content {
     position: relative;
-    top: -30px;
+    top: -48px;
   }
 
   &__box-content {
@@ -751,7 +788,7 @@
   &__text {
     position: relative;
     max-width: 465px;
-    margin-bottom: 20px;
+    margin-bottom: 21px;
     padding-left: 50px;
 
     &::before {
@@ -782,12 +819,11 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  
 
   &__image-box {
     position: relative;
     right: -95px;
-    bottom: -15px;
+    bottom: 5px;
   }
 }
 
@@ -797,7 +833,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  top: -480px;
+  top: -24px;
   z-index: 1;
 
   &:after {
@@ -807,9 +843,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, .9);
+    background: rgba(0, 0, 0, 0.9);
     z-index: 2;
-    box-shadow: inset 200px 50px 200px 0px rgb(0 0 0 / 99%);
+    box-shadow: inset 200px 50px 200px 0px rgb(0, 0, 0, 0.99);
   }
 
   &::before {
@@ -862,18 +898,20 @@
       justify-content: space-between;
     }
   }
-  
+
   &__box {
     max-width: 255px;
   }
 
   &__box--top {
     position: relative;
+
     &:first-child {
       left: 66px;
     }
-    &:last-child{
-      right:22px;
+
+    &:last-child {
+      right: 22px;
       padding-top: 42px;
     }
   }
@@ -883,7 +921,7 @@
     width: 100%;
     max-width: 1170px;
     justify-content: space-between;
-    
+
     &:first-child {
       margin-bottom: 83px;
     }
@@ -930,13 +968,177 @@
       left: 89px;
     }
 
-    &:nth-child(2){
+    &:nth-child(2) {
       left: 40px;
     }
 
     &:last-child {
       right: 5px;
     }
+  }
+}
+
+.team {
+  position: relative;
+  background-image: url('../images/team/team-bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0;
+  z-index: 1;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 30px 120px 5px rgb(0, 0, 0, 0.99);
+    z-index: 2;
+  }
+
+  &__title,
+  &__text,
+  &__inner {
+    top: 30px;
+  }
+
+  &__title {
+    position: relative;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 35px;
+    z-index: 3;
+  }
+
+  &__text {
+    position: relative;
+    text-align: center;
+    max-width: 1040px;
+    margin: 0 auto 58px;
+    z-index: 3;
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 3;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__list:nth-child(2) {
+    margin-bottom: 53px;
+  }
+
+  &__list:nth-child(2) .team__item {
+
+    &:first-child,
+    &:nth-child(2),
+    &:last-child {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 6px;
+  }
+
+  .link.link--team {
+    min-width: 398px;
+  }
+
+  .logo {
+    padding: 59px 57px;
+  }
+}
+
+.partners {
+  position: relative;
+  background-image: url('../images/partners/partners-bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 160px 0;
+  z-index: 1;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 2;
+    box-shadow: inset 200px 50px 200px 0px rgb(0, 0, 0, 0.75);
+  }
+
+  &__title,
+  &__text,
+  &__inner {
+    top: -75px;
+  }
+
+  &__title {
+    position: relative;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 70px;
+    z-index: 3;
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 3;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:first-child{
+      margin-bottom: 33px;
+    }
+  }
+
+  &__list:last-child {
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item {
+    background: rgba(196, 196, 196, 0.42);
+    border: 2px solid rgba(255, 255, 255, 0.58);
+    border-radius: 12px;
+    width: 270px;
+    font-weight: 700;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+  }
+
+  &__item + .partners__item {
+    margin-left: 27px;
+  }
+
+  &__text {
+    background: linear-gradient(180deg, #D2D8DE 10%, #FEFFFF 30%, #C0C3C6 50%, #B6BBBF 70%, #ACB2B7 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 
