@@ -11,6 +11,7 @@
   width: 100%;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.47) 25.63%, rgba(0, 0, 0, 0) 117.23%);
   backdrop-filter: blur(12px);
+  z-index: 2;
 
   &__inner {
     display: flex;
@@ -598,7 +599,7 @@
   position: relative;
   top: 40px;
   padding: 65px 0 140px;
-  background-image: url('../images/features/features-bg.png');
+  background-image: url('../images/features/features-bg.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -619,7 +620,7 @@
 
 .concept {
   position: relative;
-  background-image: url('../images/concept/concept-bg.png');
+  background-image: url('../images/concept/concept-bg.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -829,7 +830,7 @@
 
 .development {
   position: relative;
-  background-image: url('../images/development/development-bg.png');
+  background-image: url('../images/development/development-bg.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -980,7 +981,7 @@
 
 .team {
   position: relative;
-  background-image: url('../images/team/team-bg.png');
+  background-image: url('../images/team/team-bg.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1065,7 +1066,7 @@
 
 .partners {
   position: relative;
-  background-image: url('../images/partners/partners-bg.png');
+  background-image: url('../images/partners/partners-bg.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1140,6 +1141,59 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+}
+
+.team-page {
+  position: relative;
+  background-image: url('../images/partners/partners-bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 160px 0;
+  z-index: 1;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 2;
+    box-shadow: inset 200px 50px 200px 0px rgb(0, 0, 0, 0.75);
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 3;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: center;
+    padding-left: 58px;
+    width: 291px;
+    flex-direction: column;
+    background: rgba(196, 196, 196, 0.18);
+  }
+
+  &__image {
+    width: 291px;
+  }
+
+  &__position {
+    max-width: 183px;
+  }
+
 }
 
 
