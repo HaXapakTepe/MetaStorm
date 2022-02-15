@@ -177,7 +177,7 @@
   padding-bottom: 240px;
 
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -316,7 +316,7 @@
   padding: 240px 0 190px;
 
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -432,7 +432,7 @@
 
         &::before {
           position: absolute;
-          content: '';
+          content: "";
           width: 14.5px;
           height: 14.5px;
           border-radius: 50%;
@@ -464,7 +464,7 @@
   box-shadow: 0 -130px 90px rgb(0, 0, 0, 0.9);
 
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     top: -267px;
     left: 0;
@@ -628,7 +628,7 @@
   z-index: 1;
 
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -838,7 +838,7 @@
   z-index: 1;
 
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -989,7 +989,7 @@
   z-index: 1;
 
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -1074,7 +1074,7 @@
   z-index: 1;
 
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -1092,13 +1092,12 @@
   }
 
   &__title {
-    position: relative;
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 70px;
-    z-index: 3;
   }
 
+  &__title,
   &__inner {
     position: relative;
     z-index: 3;
@@ -1109,7 +1108,7 @@
     justify-content: center;
     align-items: center;
 
-    &:first-child{
+    &:first-child {
       margin-bottom: 33px;
     }
   }
@@ -1132,7 +1131,7 @@
     padding: 30px 0;
   }
 
-  &__item + .partners__item {
+  &__item+.partners__item {
     margin-left: 27px;
   }
 
@@ -1146,52 +1145,128 @@
 .team-page {
   position: relative;
   background-image: url('../images/partners/partners-bg.jpg');
-  background-position: center;
+  background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 160px 0;
+  padding: 180px 0;
   z-index: 1;
 
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(0, 0, 0, 0.75);
     z-index: 2;
     box-shadow: inset 200px 50px 200px 0px rgb(0, 0, 0, 0.75);
   }
 
+  &__title {
+    text-transform: uppercase;
+    text-align: center;
+    padding-left: 120px;
+    margin-bottom: 90px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translate(-140%, 0);
+      width: 78px;
+      height: 105px;
+      background-image: url('../images/benefits/3.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &__title,
   &__inner {
     position: relative;
     z-index: 3;
   }
 
+  &__inner {
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 5px;
+      width: 935px;
+      height: 939px;
+      background-image: url('../images/team-page/shot.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
   &__list {
     display: flex;
+    justify-content: end;
   }
 
   &__item {
     display: flex;
+
+    &:hover {
+      background: linear-gradient(180deg, #5B2B30 0%, #6B3935 57.29%, #A25B48 98.44%), rgba(196, 196, 196, 0.18);
+    }
+  }
+
+  &__item--rewerse {
+    flex-direction: row-reverse;
   }
 
   &__box {
     display: flex;
     justify-content: center;
-    padding-left: 58px;
+    padding-left: 65px;
     width: 291px;
     flex-direction: column;
     background: rgba(196, 196, 196, 0.18);
+  }
+
+  &__box--top {
+    border-radius: 0 15px 0 0;
+  }
+
+  &__box--bottom {
+    border-radius: 0 0 15px 0;
   }
 
   &__image {
     width: 291px;
   }
 
+  &__image--top {
+    border-radius: 15px 0 0 0;
+  }
+
+  &__image--bottom {
+    border-radius: 0 0 0 15px;
+  }
+
+  &__name {
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: 500;
+    color: $default;
+  }
+
+  &__accent {
+    position: relative;
+    top: 4px;
+    left: 2px;
+  }
+
   &__position {
     max-width: 183px;
+    color: rgba(255, 255, 255, 0.41);
   }
 
 }
