@@ -24,3 +24,12 @@
     url("../fonts/Jost-Bold.woff") format("woff");
   font-display: swap;
 }
+
+@font-face {
+  font-family: "RobotoMono";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/RobotoMono-Regular.woff2") format("woff2"),
+    url("../fonts/RobotoMono-Regular.woff") format("woff");
+  font-display: swap;
+}
