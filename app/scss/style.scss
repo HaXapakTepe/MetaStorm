@@ -16,7 +16,7 @@
   &__inner {
     display: flex;
     justify-content: space-between;
-    padding: 23px 0 21px;
+    padding: 20px 0 21px;
   }
 }
 
@@ -137,8 +137,8 @@
   background-size: cover;
 
   &__inner {
-    padding-top: 350px;
-    padding-bottom: 285px;
+    padding-top: 347px;
+    padding-bottom: 284px;
   }
 
   &__image {
@@ -155,7 +155,7 @@
     color: rgba(255, 255, 255, 0.68);
 
     &:last-of-type {
-      margin-bottom: 53px;
+      margin-bottom: 54px;
     }
   }
 
@@ -234,7 +234,7 @@
     transform: scale(0.99, 0.99);
 
     &:hover .video-popup__youtube {
-      transform: scale(1.1)
+      transform: scale(1.1);
     }
   }
 
@@ -327,7 +327,6 @@
     box-shadow: inset 200px 50px 200px rgb(0 0 0 / 99%), inset 0 70px 100px 0 rgb(0, 0, 0, 0.99);
   }
 
-
   &__title,
   &__text,
   &__inner {
@@ -338,7 +337,7 @@
   &__title {
     text-transform: uppercase;
     text-align: center;
-    margin: -105px 0 29px;
+    margin: -105px 0 27px;
     z-index: 3;
   }
 
@@ -346,7 +345,7 @@
     max-width: 1100px;
     margin: 0 auto;
     text-align: center;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
     z-index: 3;
   }
 
@@ -606,14 +605,14 @@
   &__title {
     text-transform: uppercase;
     text-align: center;
-    margin: -35px 0 23px;
+    margin: -35px 0 21px;
   }
 
   &__text {
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
-    margin-bottom: 95px;
+    margin-bottom: 93px;
   }
 }
 
@@ -623,7 +622,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 195px 0 410px;
+  padding: 197px 0 410px;
   z-index: 1;
 
   &:after {
@@ -642,7 +641,7 @@
     position: relative;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 58px;
+    margin-bottom: 60px;
     z-index: 3;
   }
 
@@ -1009,7 +1008,7 @@
     position: relative;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 35px;
+    margin-bottom: 37px;
     z-index: 3;
   }
 
@@ -1017,7 +1016,7 @@
     position: relative;
     text-align: center;
     max-width: 1040px;
-    margin: 0 auto 58px;
+    margin: 0 auto 57px;
     z-index: 3;
   }
 
@@ -1069,7 +1068,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 160px 0;
+  padding: 157px 0 163px;
   z-index: 1;
 
   &:after {
@@ -1317,7 +1316,8 @@
 }
 
 .private {
-  padding: 180px 0;
+  padding: 180px 0 0px;
+  margin-bottom: 115px;
 
   &__title {
     position: relative;
@@ -1342,6 +1342,7 @@
   }
 
   &__content {
+    position: relative;
     padding: 101px 0 80px 66px;
     background: rgba(0, 0, 0, 0.48);
     border: 3px solid #FF592C;
@@ -1351,9 +1352,8 @@
     &::before {
       content: "";
       position: absolute;
-      top: 49%;
-      left: 50%;
-      transform: translate(5%, -2%);
+      top: -121px;
+      right: -40px;
       width: 590px;
       height: 588px;
       background-image: url('../images/private-sale/soldier.png');
@@ -1434,6 +1434,148 @@
   .smalltext {
     padding-top: 10px;
     font-size: 16px;
+  }
+}
+
+.price {
+  padding: 0 0 200px;
+
+  &__inner {
+    position: relative;
+    right: -10px;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    position: relative;
+    padding: 70px 52px 0 42px;
+    border: 3px solid rgba(255, 255, 255, 0.9);
+    background: rgba(196, 196, 196, 0.04);
+    box-shadow: 0px 4px 40px rgba(255, 255, 63, 0.13),
+      0px 4px 4px rgba(0, 0, 0, 0.59);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+  }
+
+  &__item+.price__item {
+    margin-left: 30px;
+  }
+
+  &__item:nth-child(2) {
+    border: 3px solid #6625D6;
+    backdrop-filter: blur(29px);
+  }
+
+  &__item:last-child {
+    border: 3px solid #FFFF3F;
+  }
+
+  &__image-top {
+    position: absolute;
+    top: -37px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__title {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 32px;
+    margin-top: -3px;
+  }
+
+  &__subtitle {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 42px;
+  }
+
+  &__text {
+    position: relative;
+    font-size: 16px;
+    margin-right: 40px;
+  }
+
+  &__text--line {
+    margin-bottom: 22px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -14px;
+      left: 0;
+      width: 293px;
+      height: 1px;
+      background-image: url('../images/private-sale/line.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &__text-right {
+    position: absolute;
+    right: 0;
+  }
+
+  &__text-right--last {
+    right: 5px;
+  }
+
+  &__accent {
+    position: absolute;
+    top: 1px;
+    right: -25px;
+  }
+
+  &__text-fradient {
+    display: block;
+    text-transform: uppercase;
+    padding-top: 41px;
+    margin-bottom: 14px;
+    text-align: center;
+    font-weight: 700;
+    background: linear-gradient(180deg, #FFA12A 0%, #FEEF6D 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.form {
+  position: relative;
+  right: -4px;
+
+  &__input,
+  &__button {
+    width: 270px;
+    background: rgba(0, 0, 0, 0.46);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 10px;
+    padding: 17px 29px;
+    margin-bottom: 14px;
+
+    &::placeholder {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.56);
+    }
+  }
+
+  &__button {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 700;
+    background: linear-gradient(180deg, #FFA12A 0%, #FEEF6D 100%);
+    border: 2px solid #FFF61B;
+    border-radius: 7px;
+    padding: 15px 0;
+    margin-bottom: 46px;
+    text-align: center;
+    color: $link-hover;
+    transition: ease .3s;
   }
 }
 
