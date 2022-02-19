@@ -1299,7 +1299,6 @@
 
   &__item:hover .team-page__name--left::after,
   &__item:hover .team-page__name--right::after {
-    transition: opacity .3s;
     background-image: url('../images/icon/left-gradient.svg');
   }
 
@@ -1810,10 +1809,18 @@
     margin-bottom: 85px;
   }
 
+  &__text,
+  &__button {
+    margin: 0 auto;
+  }
+
+  &__text,
+  &__input::placeholder {
+    font-weight: 500;
+  }
+
   &__text {
     max-width: 630px;
-    margin: 0 auto;
-    font-weight: 500;
     margin-bottom: 45px;
   }
   
@@ -1821,25 +1828,23 @@
     color: #ff7300;
   }
 
+  &__input,
+  &__button {
+    width: 100%;
+  }
+
   &__input {
     display: block;
     margin: 0 auto 33px;
-    width: 100%;
     max-width: 750px;
     padding: 23px 40px;
     border: 3px solid #FFFF3F;
     box-shadow: 0px 4px 40px rgba(255, 255, 63, 0.13), 0px 4px 4px rgba(0, 0, 0, 0.59);
     border-radius: 15px;
-
-    &::placeholder {
-      font-weight: 500;
-    }
   }
 
   &__button {
-    margin: 0 auto;
     max-width: 386px;
-    width: 100%;
     padding: 19px 0 15px;
   }
 }
