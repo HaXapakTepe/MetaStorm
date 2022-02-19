@@ -35,8 +35,16 @@ body {
   }
 }
 
+.title {
+  font-size: 43px;
+  background: linear-gradient(180deg, #D2D8DE 10%, #FEFFFF 30%, #C0C3C6 50%, #B6BBBF 70%, #ACB2B7 90%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
 .link {
-  display: block;
+  position: relative;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 22px;
@@ -47,18 +55,84 @@ body {
   text-align: center;
   color: $link;
   transition: ease .3s;
+  outline: transparent;
 
-  &:hover {
-    color: $link-hover;
-    transition: ease .3s;
+  &::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 102%;
+    height: 107%;
+    border: 2px solid $link;
+    border-radius: 7px;
     border-color: #FFF61B;
     background: linear-gradient(180deg, #FFA12A 0%, #FEEF6D 100%);
+    box-shadow: 0 0px 20px #FEEF6D, 0 0px 20px #FFA12A;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  &__text {
+    position: relative;
+    z-index: 1;
+    transition: ease .3s;
+  }
+
+  &:hover {
+    &:after {
+      color: $link-hover;
+      border-color: #FFF61B;
+      box-shadow: 0 0px 20px #FEEF6D, 0 0px 20px #FFA12A;
+      opacity: 1;
+    }
+
+    .link__text {
+      color: $link-hover;
+    }
+  }
+
+  &:active {
+    transform: scale(0.95);
   }
 }
 
-.title {
-  font-size: 43px;
-  background: linear-gradient(180deg, #D2D8DE 10%, #FEFFFF 30%, #C0C3C6 50%, #B6BBBF 70%, #ACB2B7 90%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.form {
+  position: relative;
+  right: -4px;
+
+  &__input,
+  &__button {
+    background: rgba(0, 0, 0, 0.46);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 10px;
+    color: #FFFF3F;
+    padding: 17px 29px;
+    margin-bottom: 14px;
+    outline: none;
+
+    &::placeholder {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.56);
+    }
+  }
+
+  &__button {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 700;
+    background: linear-gradient(180deg, #FFA12A 0%, #FEEF6D 100%);
+    border: 2px solid #FFF61B;
+    border-radius: 7px;
+    padding: 15px 0;
+    margin-bottom: 46px;
+    text-align: center;
+    color: $link-hover;
+    transition: ease .3s;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 0px 15px 1px #FEEF6D, 0 0px 15px 1px #FFA12A;
+    }
+  }
 }
