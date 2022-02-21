@@ -134,3 +134,46 @@ body {
     }
   }
 }
+
+
+.slick-dots {
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+
+  li {
+    padding: 0 16px;
+
+    button {
+      position: relative;
+      border: 11px solid #C4C4C4;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      transition: ease .3s;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 14.5px;
+        height: 14.5px;
+        border-radius: 50%;
+        background-color: white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &:hover,
+      &:focus {
+        border-color: #ffc62a;
+      }
+    }
+
+    &.slick-active {
+      button {
+        border-color: #ffc62a;
+      }
+    }
+  }
+}

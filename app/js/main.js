@@ -8,7 +8,21 @@ $(function () {
     useTransform: true,
     speed: 900,
     slidesToShow: 3,
-    slidesToScroll: 3
+    slidesToScroll: 3,
+    responsive: [{
+      breakpoint: 1200,
+      settings: {
+        arrows: false,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      }
+    }, {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      }
+    }]
   });
 
   $('.slider-bottom__list').slick({
@@ -23,6 +37,14 @@ $(function () {
     useTransform: true,
     speed: 400,
     cssEase: 'cubic-bezier(0.77, 0, 0.18, 1)',
+    responsive: [{
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 9,
+        arrows: false,
+        dots: true
+      }
+    }]
   });
 
   $('.slider-bottom__content')
@@ -30,30 +52,10 @@ $(function () {
       $('.slider-bottom__content .slick-slide.slick-current').addClass('is-active');
     })
     .slick({
-      slidesToShow: 9,
       arrows: false,
       dots: false,
       focusOnSelect: false,
       infinite: false,
-      responsive: [{
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 5,
-          slidesToScroll: 5,
-        }
-      }, {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4,
-        }
-      }, {
-        breakpoint: 420,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-        }
-      }]
     });
 
   $('.slider-bottom__list').on('afterChange', function (event, slick, currentSlide) {
