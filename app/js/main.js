@@ -32,7 +32,6 @@ $(function () {
     autoplaySpeed: 3000,
     arrows: true,
     fade: false,
-    adaptiveHeight: true,
     infinite: false,
     useTransform: true,
     speed: 400,
@@ -40,7 +39,6 @@ $(function () {
     responsive: [{
       breakpoint: 1200,
       settings: {
-        slidesToShow: 9,
         arrows: false,
         dots: true
       }
@@ -52,6 +50,7 @@ $(function () {
       $('.slider-bottom__content .slick-slide.slick-current').addClass('is-active');
     })
     .slick({
+      slidesToShow: 9,
       arrows: false,
       dots: false,
       focusOnSelect: false,

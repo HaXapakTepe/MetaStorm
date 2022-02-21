@@ -135,6 +135,44 @@ body {
   }
 }
 
+.slick-prev,
+.slick-next,
+.slick-dots li button {
+  cursor: pointer;
+}
+
+.slick-prev,
+.slick-next,
+.slick-dots {
+  position: absolute;
+  padding: 0;
+  font-size: 0;
+  background-color: transparent;
+  outline: transparent;
+}
+
+.slick-prev,
+.slick-next {
+  top: 50%;
+  transform: translateY(-70%);
+  width: 27px;
+  height: 48px;
+  z-index: 4;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.slick-prev {
+  left: -80px;
+  background-image: url('../images/icon/arrow-left.svg');
+}
+
+.slick-next {
+  right: -85px;
+  background-image: url('../images/icon/arrow-right.svg');
+}
 
 .slick-dots {
   display: flex;
