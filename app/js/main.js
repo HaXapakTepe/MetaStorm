@@ -71,6 +71,20 @@ $(function () {
     $('.slider-bottom__list').slick('slickGoTo', goToSingleSlide);
   });
 
+  $('.partners__list--adaptive').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
+    dots: true,
+    fade: false,
+    infinite: false,
+    useTransform: true,
+    speed: 400,
+    cssEase: 'cubic-bezier(0.77, 0, 0.18, 1)',
+  });
+
 });
 
 function getTimeRemaining(endtime) {
@@ -115,3 +129,9 @@ function initializeClock(id, endtime) {
 
 const deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
 initializeClock('clockdiv', deadline);
+
+$(window).trigger(function () {
+  if ($(window).width() >= 768) {
+    $('partners__list').addClass('partners__list--adaptive');
+  };
+});

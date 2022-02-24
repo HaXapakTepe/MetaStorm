@@ -987,7 +987,16 @@
   }
 
   &__list .team__link:nth-child(2) {
-      flex-direction: row-reverse;
+    flex-direction: row-reverse;
+  }
+
+  &__link:hover,
+  &__logo {
+    transition: ease 0.3s;
+  }
+
+  &__link:hover .team__logo {
+    transform: scale(1.05);
   }
 
   &__wrapper {
@@ -1055,14 +1064,9 @@
   }
 
   &__list {
-    &:first-child {
-      margin-bottom: 33px;
-    }
-
-    &:last-child {
-      justify-content: center;
-      align-items: center;
-    }
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
 
   &__item {
@@ -1082,6 +1086,10 @@
     &:active {
       transform: scale(0.9);
     }
+  }
+
+  &__link {
+    margin-bottom: 33px;
   }
 
   &__link+.partners__link {
