@@ -1,0 +1,60 @@
+.info {
+  position: relative;
+  top: -120px;
+
+  &::before,
+  &::after {
+    content: "";
+    width: 1195px;
+    height: 941px;
+    position: absolute;
+    background-image: url('../images/info/left.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 4;
+  }
+
+  &::after {
+    content: "";
+    width: 1020px;
+    height: 880px;
+    background-image: url('../images/info/right.png');
+    z-index: 3;
+    top: 0;
+    right: 0;
+  }
+
+  &__inner,
+  &__image-box {
+    position: relative;
+  }
+
+  &__inner {
+    display: flex;
+    z-index: 4;
+  }
+
+  &__content {
+    padding: 144px 0 0 5px;
+    margin-left: -6px;
+  }
+
+  &__title {
+    letter-spacing: -1px;
+  }
+
+  &__img-title {
+    margin: -15px 0 38px;
+  }
+
+  &__text {
+    max-width: 600px;
+    margin-bottom: 27px;
+  }
+
+  &__image-box {
+    right: -180px;
+    bottom: -115px;
+  }
+}

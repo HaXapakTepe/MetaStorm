@@ -1,0 +1,224 @@
+.price {
+  padding: 0 0 167px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 283px;
+    width: 662px;
+    height: 1061px;
+    background-image: url('../images/private-sale/smoke.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+  }
+
+  &__inner,
+  &__text,
+  &__box {
+    position: relative;
+  }
+
+  &__list,
+  &__box,
+  &__maps {
+    display: flex;
+  }
+
+  &__inner {
+    z-index: 1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -211px;
+      width: 452px;
+      height: 457px;
+      background-image: url('../images/private-sale/m.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 1;
+    }
+  }
+
+  &__list {
+    margin: 0 5px;
+  }
+
+  &__item {
+    height: fit-content;
+    padding: 70px 52px 0 42px;
+    border: 3px solid rgba(255, 255, 255, 0.9);
+    background: rgba(196, 196, 196, 0.04);
+    box-shadow: 0px 4px 40px rgba(255, 255, 63, 0.13),
+      0px 4px 4px rgba(0, 0, 0, 0.59);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+  }
+
+  &__item+.price__item {
+    margin-left: 30px;
+  }
+
+  &__item:nth-child(2) {
+    border: 3px solid #6625D6;
+    backdrop-filter: blur(29px);
+  }
+
+  &__item:last-child {
+    border: 3px solid #FFFF3F;
+  }
+
+  &__image-top,
+  &__text-right,
+  &__accent {
+    position: absolute;
+  }
+
+  &__image-top {
+    top: -37px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__image--middle {
+    top: -42px;
+  }
+
+  &__title,
+  &__subtitle,
+  &__text-fradient {
+    text-align: center;
+  }
+
+  &__title,
+  &__text-fradient {
+    text-transform: uppercase;
+  }
+
+  &__title {
+    font-size: 32px;
+    margin: -3px 0 0 8px;
+  }
+
+  &__subtitle,
+  &__text-fradient {
+    display: block;
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    margin: 0 0 42px 8px;
+  }
+
+  &__text {
+    font-size: 16px;
+    margin-right: 40px;
+    margin-bottom: 41px;
+  }
+
+  &__text--line {
+    margin-bottom: 22px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -14px;
+      left: 0;
+      width: 293px;
+      height: 1px;
+      background-image: url('../images/private-sale/line.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &__text-right {
+    right: 0;
+  }
+
+  &__text-right--last {
+    right: 5px;
+  }
+
+  &__accent {
+    top: 1px;
+    right: -25px;
+  }
+
+  &__text-fradient,
+  &__title-description {
+    margin-bottom: 14px;
+  }
+
+  &__text-fradient {
+    font-weight: 700;
+    background: linear-gradient(180deg, #FFA12A 0%, #FEEF6D 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__text--middle {
+    margin-right: 21px;
+  }
+
+  &__weapon {
+    margin: 0 auto;
+  }
+
+  &__title-description,
+  &__text-description {
+    font-size: 14px;
+  }
+
+  &__title-description {
+    font-weight: 500;
+
+    &:nth-child(2) {
+      margin-top: -8px;
+    }
+  }
+
+  &__text-description {
+    margin-bottom: 24px;
+    color: rgb(255, 255, 255, 39%);
+  }
+
+  &__text-description--last {
+    margin-bottom: 13px;
+  }
+
+  &__box {
+    top: 10px;
+    margin-top: -16px;
+  }
+
+  &__image {
+    &:first-child {
+      width: 50%;
+    }
+
+    &:last-child {
+      position: absolute;
+      top: -20px;
+      right: -13px;
+    }
+  }
+
+  &__maps {
+    margin-bottom: 20px;
+  }
+
+  &__maps-image+.price__maps-image {
+    margin-left: 6px;
+  }
+
+  &__input,
+  &__button {
+    width: 270px;
+  }
+}

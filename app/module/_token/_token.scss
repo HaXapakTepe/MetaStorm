@@ -1,0 +1,108 @@
+.token {
+  position: relative;
+  top: -120px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &::before {
+    width: 1367px;
+    height: 1080px;
+    background-image: url('../images/token/left.png');
+    left: -137px;
+    top: -207px;
+    z-index: 2;
+  }
+
+  &::after {
+    width: 1246px;
+    height: 1150px;
+    background-image: url('../images/token/right.png');
+    top: -260px;
+    right: 0;
+    z-index: 1;
+  }
+
+  &__inner,
+  &__title,
+  &__content,
+  &__text,
+  &__image-box {
+    position: relative;
+  }
+
+  &__inner,
+  &__box-content {
+    display: flex;
+  }
+
+  &__inner {
+    right: 4px;
+    justify-content: space-between;
+    z-index: 4;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    margin: -11px 0 31px;
+    padding-left: 49px;
+  }
+
+  &__content {
+    top: -48px;
+  }
+
+  &__box-content {
+    margin-bottom: 50px;
+    background: rgba(196, 196, 196, 0.1);
+    border: 2px solid #515050;
+    border-radius: 20px;
+    max-width: 450px;
+    margin-left: 4px;
+  }
+
+  &__text {
+    max-width: 465px;
+    margin-bottom: 21px;
+    padding-left: 50px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -1px;
+      width: 40px;
+      height: 38px;
+      background-image: url('../images/icon/star.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &__meta {
+    padding: 23px 25px 16px 42px;
+  }
+
+  &__text-gradient {
+    display: block;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 35px;
+    padding: 20px 0 0;
+    margin-bottom: 0;
+    background: linear-gradient(180deg, #FFA12A 0%, #FEEF6D 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__image-box {
+    right: -87px;
+    bottom: 5px;
+  }
+}

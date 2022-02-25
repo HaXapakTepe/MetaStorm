@@ -451,8 +451,6 @@
 
   .socials {
     &__item {
-      max-height: 35px;
-
       &:first-child {
         margin-left: 12px;
       }
@@ -564,11 +562,11 @@
 
   .info {
     &::before {
-      top: -260px;
+      top: -265px;
     }
 
     &::after {
-      top: 210px;
+      top: 205px;
     }
 
     &__content {
@@ -680,6 +678,30 @@
     }
   }
 
+  .partners {
+    margin-bottom: 180px;
+  }
+
+  .footer {
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__text {
+      order: 2;
+      margin-bottom: 100px;
+    }
+
+    .socials {
+      order: 1;
+      margin-bottom: 40px;
+
+      &__text {
+        bottom: 0;
+      }
+    }
+  }
+
 }
 
 @media (max-width: 480px) {
@@ -697,8 +719,8 @@
 
   .menu {
     &__item-link {
-      padding: 5px;
-      font-size: 12px;
+      padding: 6px 5px;
+      font-size: 11px;
     }
 
     &__link {
@@ -708,8 +730,6 @@
 
   .socials {
     &__item {
-      max-height: 25px;
-
       &:first-child {
         margin-left: 5px;
       }
@@ -797,7 +817,6 @@
   }
 
   .token {
-
     &::before {
       top: -155px;
       background-image: url("../images/token/center.png");
@@ -834,6 +853,8 @@
   }
 
   .team {
+    padding: 0;
+
     &__image {
       max-width: 164px;
     }

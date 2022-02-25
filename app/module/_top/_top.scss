@@ -1,0 +1,34 @@
+.top {
+  background-image: url('../images/top/top-bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__inner {
+    padding: 350px 0 290px;
+  }
+
+  &__image {
+    margin-bottom: 60px;
+  }
+
+  &__text {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 600;
+    padding-left: 54px;
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.68);
+
+    &:last-of-type {
+      margin-bottom: 54px;
+    }
+  }
+
+  &__aim {
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+  }
+}

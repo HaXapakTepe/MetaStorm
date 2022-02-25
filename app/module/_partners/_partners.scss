@@ -1,0 +1,85 @@
+.partners {
+  position: relative;
+  background-image: url('../images/partners/partners-bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 152px 0 165px;
+  z-index: 1;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 2;
+    box-shadow: inset 200px 50px 200px 0px rgb(0, 0, 0, 0.75);
+  }
+
+  &__title,
+  &__text,
+  &__inner {
+    top: -75px;
+  }
+
+  &__title,
+  &__inner {
+    position: relative;
+    z-index: 3;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 70px;
+  }
+
+  &__list,
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__list {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item {
+    background: rgba(196, 196, 196, 0.42);
+    border: 2px solid rgba(255, 255, 255, 0.58);
+    border-radius: 12px;
+    width: 270px;
+    font-weight: 700;
+    font-size: 24px;
+    padding: 31px 0;
+    transition: ease 0.3s;
+
+    &:hover {
+      transform: scale(0.95);
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+
+  &__link {
+    margin-bottom: 33px;
+  }
+
+  &__link+.partners__link {
+    margin-left: 30px;
+  }
+
+  &__text {
+    background: linear-gradient(180deg, #D2D8DE 10%, #FEFFFF 30%, #C0C3C6 50%, #B6BBBF 70%, #ACB2B7 90%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

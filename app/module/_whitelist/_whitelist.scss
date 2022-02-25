@@ -1,0 +1,54 @@
+.whitelist {
+  margin-bottom: 130px;
+
+  &__title,
+  &__text {
+    text-align: center;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 32px;
+    margin: -3px 0 0 8px;
+    margin-bottom: 85px;
+  }
+
+  &__text,
+  &__button {
+    margin: 0 auto;
+  }
+
+  &__text,
+  &__input::placeholder {
+    font-weight: 500;
+  }
+
+  &__text {
+    max-width: 630px;
+    margin-bottom: 45px;
+  }
+
+  &__text-accent {
+    color: #ff7300;
+  }
+
+  &__input,
+  &__button {
+    width: 100%;
+  }
+
+  &__input {
+    display: block;
+    margin: 0 auto 33px;
+    max-width: 750px;
+    padding: 23px 40px;
+    border: 3px solid #FFFF3F;
+    box-shadow: 0px 4px 40px rgba(255, 255, 63, 0.13), 0px 4px 4px rgba(0, 0, 0, 0.59);
+    border-radius: 15px;
+  }
+
+  &__button {
+    max-width: 386px;
+    padding: 19px 0 15px;
+  }
+}

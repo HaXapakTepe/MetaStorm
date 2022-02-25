@@ -1,0 +1,24 @@
+.features {
+  position: relative;
+  padding: 110px 0 105px;
+  background-image: url('../images/features/features-bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__title,
+  &__text {
+    text-align: center;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    margin: -35px 0 21px;
+  }
+
+  &__text {
+    max-width: 900px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+  }
+}

@@ -1,0 +1,125 @@
+.concept {
+  position: relative;
+  background-image: url('../images/concept/concept-bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 200px 0 415px;
+  z-index: 1;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+    box-shadow: inset 200px 50px 200px 0 rgb(0, 0, 0, 0.99);
+  }
+
+  &__title,
+  &__inner,
+  &__content:nth-child(2),
+  &__meta,
+  &__text-aim {
+    position: relative;
+  }
+
+  &__title,
+  &__inner {
+    z-index: 3;
+  }
+
+  &__title,
+  &__text-aim {
+    text-transform: uppercase;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  &__inner,
+  &__text-top,
+  &__text-aim {
+    display: flex;
+  }
+
+  &__inner {
+    justify-content: space-between;
+  }
+
+  &__content {
+    &:nth-child(2) {
+      top: 2px;
+    }
+  }
+
+  &__text {
+    max-width: 575px;
+    margin-bottom: 29px;
+
+    &:first-child {
+      padding-top: 12px;
+    }
+
+    &:nth-child(2) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__item {
+    background: rgba(0, 0, 0, 0.29);
+    border: 3px solid #515050;
+    border-top: transparent;
+    border-radius: 25px 25px 25px 25px;
+    margin-bottom: 40px;
+  }
+
+  &__text-top,
+  &__text-aim {
+    align-items: center;
+  }
+
+  &__text-top {
+    justify-content: center;
+    padding: 8px 172px 12px 173px;
+    margin: 0 -3px 27px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 32px;
+    border-radius: 5.5px 5.5px 0 0;
+    background: linear-gradient(180deg, #5B2B30 -90.77%, #6B3935 12.11%, #A25B48 97.02%);
+  }
+
+  &__meta {
+    top: 6px;
+    right: 9px;
+  }
+
+  &__text-aim {
+    justify-content: start;
+    padding-left: 120px;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: rgba(255, 255, 255, 0.68);
+
+    &:last-child {
+      margin-bottom: 26px;
+    }
+  }
+
+  &__aim {
+    position: absolute;
+    top: 2px;
+    left: 71px;
+  }
+
+  &__wrapper-new {
+    display: none;
+  }
+}

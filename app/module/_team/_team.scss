@@ -1,0 +1,84 @@
+.team {
+  position: relative;
+  background-image: url('../images/team/team-bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 140px 0 80px;
+  z-index: 1;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 30px 120px 5px rgb(0, 0, 0, 0.99);
+    z-index: 2;
+  }
+
+  &__title,
+  &__text,
+  &__inner,
+  &__wrapper {
+    position: relative;
+    z-index: 3;
+  }
+
+  &__title,
+  &__text {
+    text-align: center;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    margin-bottom: 35px;
+  }
+
+  &__text {
+    max-width: 1040px;
+    margin: 0 auto 25px;
+  }
+
+  &__link,
+  &__inner,
+  &__wrapper {
+    display: flex;
+  }
+
+  &__inner {
+    margin-bottom: 77px;
+  }
+
+  &__list .team__link:nth-child(2) {
+    flex-direction: row-reverse;
+  }
+
+  &__link:hover,
+  &__logo {
+    transition: ease 0.3s;
+  }
+
+  &__link:hover .team__logo {
+    transform: scale(1.05);
+  }
+
+  &__wrapper {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .link--team {
+    min-width: 398px;
+
+    &::after {
+      width: 101.3%;
+    }
+  }
+
+  &__item {
+    padding: 56px 58px;
+  }
+}
