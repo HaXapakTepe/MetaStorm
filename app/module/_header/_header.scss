@@ -17,6 +17,11 @@
 .logo {
   position: relative;
   left: -7px;
+  transition: ease 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 .menu {
@@ -45,13 +50,13 @@
 
   &__link {
     position: relative;
-    padding: 5px;
+    padding: 5px 5px 13px;
     color: $default;
 
     &::after {
       content: "";
       position: absolute;
-      bottom: -13px;
+      bottom: 0;
       left: 0;
       height: 3px;
       width: 100%;
